@@ -3,47 +3,6 @@
   "wallpaper": "https://bing.img.run/rand.php",
   "sites": [
     {
-      "key": "suoni_duanju",
-      "name": "🍎索尼┃红果短剧专区",
-      "type": 1,
-      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "爽文短剧",
-        "反转爽剧",
-        "女频恋爱",
-        "现代都市",
-        "年代穿越",
-        "古装仙侠",
-        "脑洞悬疑",
-        "漫剧"
-      ]
-    },
-    {
-      "key": "csp_Duanju_w",
-      "name": "🍎精品┃红果短剧网",
-      "type": 3,
-      "api": "csp_Duanju",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "csp_XBPQ_putao",
-      "name": "🍇葡萄┃爆款短剧场",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "分类url": "https://www.putaojuchang.com/show/{cateId}/area/{area}/class/{class}/by/{by}/page/{catePg}/year/{year}.html",
-        "分类": "微剧场$1#言情$6#逆袭$7#战神$8#异能$9#生活$10#重生$12#复仇$20#爱情$11"
-      }
-    },
-    {
       "key": "豆瓣",
       "name": "豆瓣",
       "type": 3,
@@ -51,21 +10,6 @@
       "searchable": 0,
       "changeable": 1,
       "ext": "https://agit.ai/leevi/PG/raw/branch/master/lib/douban.json"
-    },
-    {
-      "key": "网盘配置",
-      "name": "网盘及彈幕配置",
-      "type": 3,
-      "api": "csp_Config",
-      "searchable": 0,
-      "changeable": 0,
-      "ext": "https://agit.ai/leevi/PG/raw/branch/master/lib/tokenm.json"
-    },
-    {
-      "key": "Local",
-      "name": "本地",
-      "type": 3,
-      "api": "csp_Local"
     },
     {
       "key": "PikPakShare",
@@ -170,6 +114,65 @@
       "filterable": 1,
       "timeout": 30,
       "ext": "https://agit.ai/leevi/PG/raw/branch/master/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/leevi/PG/raw/branch/master/lib/wogg.json"
+    },
+    {
+      "key": "suoni_duanju",
+      "name": "🍎索尼┃红果短剧专区",
+      "type": 1,
+      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "爽文短剧",
+        "反转爽剧",
+        "女频恋爱",
+        "现代都市",
+        "年代穿越",
+        "古装仙侠",
+        "脑洞悬疑",
+        "漫剧"
+      ]
+    },
+    {
+      "key": "csp_Duanju_w",
+      "name": "🍎精品┃红果短剧网",
+      "type": 3,
+      "api": "csp_Duanju",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "csp_XBPQ_putao",
+      "name": "🍇葡萄┃爆款短剧场",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "分类url": "https://www.putaojuchang.com/show/{cateId}/area/{area}/class/{class}/by/{by}/page/{catePg}/year/{year}.html",
+        "分类": "微剧场$1#言情$6#逆袭$7#战神$8#异能$9#生活$10#重生$12#复仇$20#爱情$11"
+      }
+    },
+    {
+      "key": "短剧",
+      "name": "短剧",
+      "type": 3,
+      "api": "csp_Duanju",
+      "searchable": 0,
+      "changeable": 1
+    },
+    {
+      "key": "短剧网",
+      "name": "💢短剧网",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "分类url:https://m.duanju5.com/vodshow/{cateId}--{by}------{catePg}---.html,分类:逆袭$nixi#甜宠$tianchong#虐恋$nuelian#穿越$chuanyue#重生$chongsheng"
     },
     {
       "key": "影视车",
@@ -896,14 +899,6 @@
       "ext": "https://agit.ai/leevi/PG/raw/branch/master/js/alist.json"
     },
     {
-      "key": "短剧",
-      "name": "短剧",
-      "type": 3,
-      "api": "csp_Duanju",
-      "searchable": 0,
-      "changeable": 1
-    },
-    {
       "key": "MV_vod",
       "name": "电视┃MTV",
       "type": 1,
@@ -1418,16 +1413,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://agit.ai/l/ove/raw/branch/master/sub/奇优.json"
-    },
-    {
-      "key": "短剧网",
-      "name": "💢短剧网",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "分类url:https://m.duanju5.com/vodshow/{cateId}--{by}------{catePg}---.html,分类:逆袭$nixi#甜宠$tianchong#虐恋$nuelian#穿越$chuanyue#重生$chongsheng"
     },
     {
       "key": "爱美剧",
