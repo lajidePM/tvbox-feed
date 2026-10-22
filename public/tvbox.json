@@ -3,6 +3,47 @@
   "wallpaper": "https://bing.img.run/rand.php",
   "sites": [
     {
+      "key": "suoni_duanju",
+      "name": "🍎索尼┃红果短剧专区",
+      "type": 1,
+      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "爽文短剧",
+        "反转爽剧",
+        "女频恋爱",
+        "现代都市",
+        "年代穿越",
+        "古装仙侠",
+        "脑洞悬疑",
+        "漫剧"
+      ]
+    },
+    {
+      "key": "csp_Duanju_w",
+      "name": "🍎精品┃红果短剧网",
+      "type": 3,
+      "api": "csp_Duanju",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "csp_XBPQ_putao",
+      "name": "🍇葡萄┃爆款短剧场",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "分类url": "https://www.putaojuchang.com/show/{cateId}/area/{area}/class/{class}/by/{by}/page/{catePg}/year/{year}.html",
+        "分类": "微剧场$1#言情$6#逆袭$7#战神$8#异能$9#生活$10#重生$12#复仇$20#爱情$11"
+      }
+    },
+    {
       "key": "豆瓣",
       "name": "豆瓣",
       "type": 3,
