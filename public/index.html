@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVBox / 影视仓 专属永久聚合源</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+        .card { background: #1e293b; border-radius: 16px; padding: 32px; max-width: 600px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #334155; }
+        h1 { font-size: 24px; margin-top: 0; color: #38bdf8; display: flex; align-items: center; gap: 10px; }
+        p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+        .box { background: #0f172a; border-radius: 8px; padding: 16px; margin: 16px 0; border: 1px solid #334155; }
+        .label { font-size: 12px; color: #64748b; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
+        .url { font-family: monospace; font-size: 14px; color: #a5f3fc; word-break: break-all; }
+        .btn { display: inline-block; background: #0284c7; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px; cursor: pointer; margin-top: 8px; text-decoration: none; }
+        .btn:hover { background: #0369a1; }
+        .badge { background: #059669; color: white; padding: 2px 8px; border-radius: 9999px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📺 影视仓 / TVBox 专属全网聚合源</h1>
+        <p>基于 GitHub Actions 每天自动化测速、去重、排险与清洗，全球 Cloudflare 边缘 CDN 节点加速直连，永不失效。</p>
+        
+        <div class="box">
+            <div class="label">🌟 聚合单仓接口（复制填入影视仓「配置」）：</div>
+            <div class="url" id="u1">https://tvbox.pages.dev/tvbox.json</div>
+            <button class="btn" onclick="copy('u1')">一键复制单仓链接</button>
+        </div>
+
+        <div class="box">
+            <div class="label">📦 影视仓专用多仓接口（切换备用线路）：</div>
+            <div class="url" id="u2">https://tvbox.pages.dev/multi.json</div>
+            <button class="btn" onclick="copy('u2')">一键复制多仓链接</button>
+        </div>
+
+        <p style="text-align: center; font-size: 12px; color: #64748b; margin-top: 24px;">由 Hermes AI Agent 自动化构建并部署 · <span class="badge">健康运行中</span></p>
+    </div>
+    <script>
+        document.getElementById('u1').innerText = window.location.origin + '/tvbox.json';
+        document.getElementById('u2').innerText = window.location.origin + '/multi.json';
+        function copy(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => alert('已成功复制到剪贴板！可以直接填入电视影视仓配置'));
+        }
+    </script>
+</body>
+</html>

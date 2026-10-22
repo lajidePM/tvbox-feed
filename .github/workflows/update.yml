@@ -1,0 +1,37 @@
+name: 每天自动更新影视仓聚合源
+
+on:
+  schedule:
+    - cron: '0 20 * * *' # 每天北京时间凌晨4点自动触发
+  workflow_dispatch:      # 支持手动一键运行
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 执行源聚合与清洗
+        run: |
+          python3 aggregate.py
+
+      - name: 提交并推送到仓库
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/
+          git commit -m "chore: 自动同步最新全网影视源 [skip ci]" || exit 0
+          git push
+
+      - name: 自动部署到 Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=tvbox-live
